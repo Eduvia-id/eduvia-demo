@@ -1,20 +1,60 @@
 @import "tailwindcss";
 
+@theme {
+  /* Sapphire */
+  --color-sapphire-light: #E9F2FF;
+  --color-sapphire-light-hover: #DDECFF;
+  --color-sapphire-light-active: #BAD8FF;
+
+  --color-sapphire-normal: #1F80FF;
+  --color-sapphire-normal-hover: #1C73E6;
+  --color-sapphire-normal-active: #1966CC;
+
+  --color-sapphire-dark: #1760BF;
+  --color-sapphire-dark-hover: #134D99;
+  --color-sapphire-dark-active: #0E3A73;
+
+  --color-sapphire-darker: #0B2D59;
+
+  /* Salmon */
+  --color-salmon-light: #FFF1E9;
+  --color-salmon-light-hover: #FFEADD;
+  --color-salmon-light-active: #FFD4BA;
+
+  --color-salmon-normal: #FF751F;
+  --color-salmon-normal-hover: #E6691C; 
+  --color-salmon-normal-active: #CC5E19;
+
+  --color-salmon-dark: #BF5817;
+  --color-salmon-dark-hover: #994613;
+  --color-salmon-dark-active: #73350E;
+
+  --color-salmon-darker: #59290B;
+
+   /* Neutral */
+  --color-neutral-light: #FDFDFD;
+  --color-neutral-light-hover: #FBFBFB;
+  --color-neutral-light-active: #F7F7F7;
+
+  --color-neutral-normal: #E6E6E6;
+  --color-neutral-normal-hover: #CFCFCF;
+  --color-neutral-normal-active: #B8B8B8;
+
+  --color-neutral-dark: #ADADAD;
+  --color-neutral-dark-hover: #8A8A8A;
+  --color-neutral-dark-active: #676767;
+
+  --color-neutral-darker: #515151;
+
+  --font-roboto: var(--font-roboto);
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-
 body {
-  background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
 }
