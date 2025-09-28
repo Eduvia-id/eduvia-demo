@@ -3,6 +3,7 @@
 import { motion } from 'motion/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 type NavItemProps = {
   item: {
@@ -15,7 +16,10 @@ type NavItemProps = {
 
 const NavItem = ({ item, variant = 'desktop', index = 0 }: NavItemProps) => {
   const pathname = usePathname();
-  const isActive = pathname === item.path || pathname.startsWith(`${item.path}/`);
+  const [isActive, setIsActive] = useState(false);
+  useEffect(() => {
+    setIsActive(pathname === item.path || pathname.startsWith(`${item.path}/`));
+  }, [pathname, item.path]);
 
   // Mobile variant
   if (variant === 'mobile') {
