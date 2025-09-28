@@ -28,10 +28,8 @@ const NavItem = ({ item, variant = 'desktop', index = 0 }: NavItemProps) => {
       >
         <Link
           href={item.path}
-          className={`block py-3 px-2 rounded-md ${isActive
-            ? 'font-semibold text-salmon-normal bg-salmon-50'
-            : 'text-gray-500 hover:bg-gray-50'
-            }`}
+          aria-current={isActive ? 'page' : undefined}
+          className="block py-3 px-2 rounded-md text-gray-500 hover:bg-gray-50 aria-[current=page]:font-semibold aria-[current=page]:text-salmon-normal aria-[current=page]:bg-salmon-50"
         >
           {item.name}
         </Link>
@@ -41,13 +39,11 @@ const NavItem = ({ item, variant = 'desktop', index = 0 }: NavItemProps) => {
 
   // Desktop variant
   return (
-    <motion.div
-      whileHover={{ scale: isActive ? 1 : 1.05 }}
-    >
+    <motion.div whileHover={{ scale: isActive ? 1 : 1.05 }}>
       <Link
         href={item.path}
-        className={`text-md ${isActive ? 'font-semibold text-salmon-normal' : 'text-gray-500 hover:text-salmon-normal'
-          }`}
+        aria-current={isActive ? 'page' : undefined}
+        className="text-md text-gray-500 hover:text-salmon-normal aria-[current=page]:font-semibold aria-[current=page]:text-salmon-normal"
       >
         {item.name}
       </Link>
